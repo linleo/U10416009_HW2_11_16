@@ -20,6 +20,15 @@ public class TestRepeatAdditionQuiz
 			repeat.displaySecondQuestion();
 			answer.add(input.nextInt());
 			counter++;
+			//to tell user if an answer is entered again 
+			for (int i=0;i<=counter-1;i++)
+			{
+				if (answer.get(counter) == answer.get(i))
+				{
+					System.out.println("You already entered " + answer.get(counter));
+					break;
+				}	
+			}
 		}
 		System.out.print("You got it!");
 	}	
